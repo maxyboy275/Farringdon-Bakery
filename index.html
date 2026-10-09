@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farringdon Bakery | Glen Innes</title>
+<style>
+:root {
+  --green: #183c2e;
+  --cream: #f8f4e9;
+  --paper: #fffdf7;
+  --orange: #d77a43;
+  --ink: #242b24;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+img { width: 100%; display: block; object-fit: cover; }
+.topbar {
+  background: var(--green);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+header {
+  background: var(--paper);
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.logo {
+  color: var(--green);
+  font: bold 25px Georgia, serif;
+  text-decoration: none;
+}
+nav { display: flex; gap: 20px; align-items: center; }
+nav a { text-decoration: none; font-size: 13px; font-weight: bold; }
+.button {
+  display: inline-block;
+  background: var(--orange);
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--green);
+  color: white;
+  min-height: 500px;
+}
+.hero-copy {
+  padding: 70px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.eyebrow {
+  color: #e5a16d;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+h1, h2, h3 { font-family: Georgia, serif; }
+h1 { font-size: clamp(42px, 5vw, 68px); line-height: 1.05; font-weight: normal; }
+.hero p { color: #e4e7dc; }
+.hero-image img { height: 100%; min-height: 350px; }
+.strip {
+  background: #eae3d3;
+  color: var(--green);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 18px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+section { padding: 70px 8%; }
+.section-head { text-align: center; max-width: 650px; margin: auto auto 35px; }
+.section-head h2, .story h2, .visit h2 {
+  color: var(--green);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: normal;
+  line-height: 1.15;
+}
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.menu-card {
+  background: var(--paper);
+  border: 1px solid #e9e1d2;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.menu-card img { height: 220px; }
+.menu-info { padding: 20px; }
+.menu-info h3 { color: var(--green); margin-top: 0; }
+.menu-info p { color: #716f64; font-size: 14px; }
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #eae3d3;
+  padding: 0;
+}
+.story img { height: 100%; min-height: 400px; }
+.story-copy { padding: 55px 12%; }
+.story-copy p { color: #55594e; }
+.visit { background: var(--paper); }
+.visit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+.map-card {
+  background: var(--cream);
+  padding: 30px;
+  border: 1px solid #e7dfd0;
+}
+.cta {
+  text-align: center;
+  background: var(--green);
+  color: white;
+}
+.cta h2 { font: normal clamp(32px, 4vw, 46px) Georgia, serif; }
+.cta p { color: #e4e7dc; }
+footer {
+  background: #102a20;
+  color: white;
+  padding: 30px 7%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer a { color: white; }
+@media(max-width:760px) {
+  header { padding: 16px 5%; }
+  nav { gap: 10px; }
+  nav a:not(.nav-cta) { display: none; }
+  .hero, .story, .visit-grid { grid-template-columns: 1fr; }
+  .hero-copy { padding: 45px 7%; }
+  .hero-image img { height: 300px; min-height: 0; }
+  section { padding: 55px 6%; }
+  .menu-grid { grid-template-columns: 1fr; }
+  .story img { min-height: 280px; }
+  .story-copy { padding: 40px 7%; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">YOUR LOCAL BAKERY IN GLEN INNES, AUCKLAND</div>
+
+<header>
+  <a href="#" class="logo">Farringdon Bakery</a>
+  <nav>
+    <a href="#menu">Our menu</a>
+    <a href="#story">About us</a>
+    <a href="#visit">Find us</a>
+    <a class="button nav-cta" href="#visit">Visit us ↗</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow">A little local goodness</div>
+      <h1>Good pies.<br>Good people.<br>Good days.</h1>
+      <p>Make a stop at your local Glen Innes bakery. Pick up something savoury, treat yourself to something sweet, and take a little deliciousness into your day.</p>
+      <a class="button" href="#menu">Explore our favourites ↓</a>
+      <p><a style="color:white" href="https://www.google.com/maps/search/?api=1&query=Farringdon+Bakery+Glen+Innes+Auckland">Get directions ↗</a></p>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=1100&q=85" alt="Golden baked pastries">
+    </div>
+  </div>
+
+  <div class="strip">
+    <span>Glen Innes local</span>
+    <span>Bakery favourites</span>
+    <span>A tasty everyday stop</span>
+  </div>
+
+  <section id="menu">
+    <div class="section-head">
+      <div class="eyebrow">Something delicious</div>
+      <h2>Find your new favourite.</h2>
+      <p>Whether you're after a savoury bite or a sweet treat, there's always something delicious to look forward to.</p>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1621743478914-cc8a86d7e7b5?auto=format&fit=crop&w=800&q=85" alt="Golden baked pie">
+        <div class="menu-info">
+          <h3>Savoury favourites</h3>
+          <p>A satisfying savoury bite for lunch or whenever hunger calls.</p>
+        </div>
+      </article>
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85" alt="Freshly baked bread">
+        <div class="menu-info">
+          <h3>Freshly baked</h3>
+          <p>Make your bakery stop part of the day with something delicious.</p>
+        </div>
+      </article>
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&w=800&q=85" alt="Sweet bakery treats">
+        <div class="menu-info">
+          <h3>Sweet treats</h3>
+          <p>Treat yourself to a sweet moment on your next visit.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div>
+      <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1100&q=85" alt="Bakery pastries">
+    </div>
+    <div class="story-copy">
+      <div class="eyebrow">Your neighbourhood bakery</div>
+      <h2>A local stop for something delicious.</h2>
+      <p>Some days call for a quick bite, some call for a sweet treat. A bakery stop is a simple way to make the day a little better.</p>
+      <p>Find Farringdon Bakery in Glen Innes, Auckland, and pop in on your next trip through the neighbourhood.</p>
+      <a class="button" href="#visit">Plan your visit ↗</a>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="visit-grid">
+      <div>
+        <div class="eyebrow">Come on by</div>
+        <h2>Find us in Glen Innes.</h2>
+        <p>Planning a bakery stop? Use the map link for directions and check the latest listing for today's opening hours.</p>
+        <p><strong>Location</strong><br>Glen Innes, Auckland, New Zealand</p>
+        <p><strong>Opening hours</strong><br>Check the latest business listing before you visit.</p>
+      </div>
+      <div class="map-card">
+        <div style="font-size:40px">📍</div>
+        <div class="eyebrow">Get directions</div>
+        <h3>Farringdon Bakery</h3>
+        <p>Glen Innes<br>Auckland, New Zealand</p>
+        <a class="button" href="https://www.google.com/maps/search/?api=1&query=Farringdon+Bakery+Glen+Innes+Auckland" target="_blank" rel="noopener noreferrer">Open Google Maps ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="eyebrow">Your next bakery run</div>
+    <h2>Make today a little tastier.</h2>
+    <p>Passing through Glen Innes? Find your route and plan a bakery stop.</p>
+    <a class="button" href="https://www.google.com/maps/search/?api=1&query=Farringdon+Bakery+Glen+Innes+Auckland">Get directions ↗</a>
+  </section>
+</main>
+
+<footer>
+  <div><strong>Farringdon Bakery</strong><br>Glen Innes · Auckland, New Zealand</div>
+  <div><a href="#menu">Menu</a> · <a href="#story">About</a> · <a href="#visit">Find us</a></div>
+</footer>
+
+</body>
+</html>
